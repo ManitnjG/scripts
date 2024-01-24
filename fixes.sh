@@ -7,16 +7,16 @@ git cherry-pick 5e769f677008161357a8855ed2d606f8a6198de7
 cd ../../
 
 # Mixer: adjust input volume levels
-cd device/lge/g6-common
-git fetch https://github.com/LG-G6/android_device_lge_g6-common.git dev/lineage-19.1
-git cherry-pick b3edeba5ac6500c145fec7222ffc696c9b819af0
-cd ../../../
+#cd device/lge/g6-common
+#git fetch https://github.com/LG-G6/android_device_lge_g6-common.git dev/lineage-19.1
+#git cherry-pick b3edeba5ac6500c145fec7222ffc696c9b819af0
+#cd ../../../
 
 # added crdroid setting
-cd device/lge/msm8996-common
-git fetch https://github.com/xc112lg/android_device_lge_msm8996-common.git patch-1
-git cherry-pick 91230d98a47749392577bc336a4cfba972d72ef5
-cd ../../../
+#cd device/lge/msm8996-common
+#git fetch https://github.com/xc112lg/android_device_lge_msm8996-common.git patch-1
+#git cherry-pick 91230d98a47749392577bc336a4cfba972d72ef5
+#cd ../../../
 
 
 
