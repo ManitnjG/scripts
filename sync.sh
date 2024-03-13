@@ -61,7 +61,7 @@ fi
 if [ "$DEVICE" == "all" ]; then
     echo "Building for all devices..."
  rm -rf out/target/product/*/*.zip
-lunch evolution_h872-userdebug
+lunch cipher_h872-userdebug
 
 m -j$(nproc --all) evolution
  
