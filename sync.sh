@@ -67,10 +67,10 @@ if [ "$DEVICE" == "all" ]; then
  
 elif [ "$DEVICE" == "h872" ]; then
     echo "Building for h872..."
-export BUILD_DEVICE="h872"
- #   lunch lineage_h872-userdebug
-  #  m installclean
-  #  m -j$(nproc --all) bacon
+
+    lunch lineage_h872-userdebug
+    m installclean
+    m -j$(nproc --all) bacon
 else
     echo "Building for the specified device: $DEVICE..."
     # Build for the specified device
