@@ -35,7 +35,7 @@ fi
 
 #git clean -fdX
 #rm -rf frameworks/base/
-rm -rf .repo/local_manifests
+rm -rf .repo/local_manifests hardware/qcom-caf/common
 #rm -rf device/lge/
 #rm -rf kernel/lge/msm8996
 mkdir -p .repo/local_manifests
