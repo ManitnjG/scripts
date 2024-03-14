@@ -25,7 +25,7 @@
     <project name="xc112lg/android_hardware_lge" path="hardware/lge" remote="github" revision="ci" />
   <project name="xc112lg/msm8996_lge_kernel" path="kernel/lge/msm8996" remote="github" revision="patch-1" />
     <project name="xc112lg/android_device_lge_msm8996-common" path="device/lge/msm8996-common" remote="github" revision="ev2" />
-
+  <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-21.0"/>
 
  <project path="hardware/qcom-caf/msm8996/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
   <project path="hardware/qcom-caf/msm8996/display" name="LineageOS/android_hardware_qcom_display" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
