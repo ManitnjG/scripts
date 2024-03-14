@@ -33,10 +33,6 @@
     <project name="xc112lg/android_device_lge_msm8996-common" path="device/lge/msm8996-common" remote="github" revision="ev2" />
   <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="github" revision="lineage-21.0"/>
 
- <project path="hardware/qcom-caf/msm8996/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
-  <project path="hardware/qcom-caf/msm8996/display" name="LineageOS/android_hardware_qcom_display" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
-  <project path="hardware/qcom-caf/msm8996/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
-  
 <remove-project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="statix" revision="tm" />
  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="evo" >
     <!-- add guard for AOSP hardware/qcom dir -->
@@ -69,4 +65,8 @@
     <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
   </project>
 
+ <project path="hardware/qcom-caf/msm8996/audio" name="LineageOS/android_hardware_qcom_audio" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8996/display" name="LineageOS/android_hardware_qcom_display" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
+  <project path="hardware/qcom-caf/msm8996/media" name="LineageOS/android_hardware_qcom_media" groups="qcom,legacy-qcom" remote="github" revision="lineage-21.0-caf-msm8996" />
+  
 </manifest>
