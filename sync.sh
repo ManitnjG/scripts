@@ -85,5 +85,32 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
 
 lunch cipher_h872-userdebug
+m installclean
+m -j$(nproc --all)  bacon
 
+
+
+rm -rf .repo/local_manifests hardware
+cp scripts/roomservice2.xml .repo/local_manifests/roomservice.xml
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+source build/envsetup.sh
+lunch cipher_h872-userdebug
+m installclean
+m -j$(nproc --all)  bacon
+
+
+rm -rf .repo/local_manifests hardware
+cp scripts/roomservice2.xml .repo/local_manifests/roomservice.xml
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+source build/envsetup.sh
+lunch cipher_h872-userdebug
+m installclean
+m -j$(nproc --all)  bacon
+
+rm -rf .repo/local_manifests hardware
+cp scripts/roomservice3.xml .repo/local_manifests/roomservice.xml
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+source build/envsetup.sh
+lunch cipher_h872-userdebug
+m installclean
 m -j$(nproc --all)  bacon
