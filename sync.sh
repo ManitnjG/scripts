@@ -34,55 +34,7 @@ rm -rf .repo/local_manifests hardware
 rm -rf device/lge/
 #rm -rf kernel/lge/msm8996
 mkdir -p .repo/local_manifests
-cp scripts/roomservice.xml .repo/local_manifests
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
-#wget -O a.py https://raw.githubusercontent.com/xc112lg/crdroid10.1/main/a.py
-#chmod +x a.py
-chmod +x scripts/export.sh
-#python3 a.py
-#source scripts/fixes.sh
-source build/envsetup.sh
-
-
-
-
-
-
-lunch cipher_h872-userdebug
-m installclean
-m -j$(nproc --all) bacon
-
-
-rm -rf .repo/local_manifests hardware
-cp scripts/roomservice1.xml .repo/local_manifests/roomservice.xml
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-source build/envsetup.sh
-
-lunch cipher_h872-userdebug
-m installclean
-m -j$(nproc --all)  bacon
-
-
-echo "3nd run"
-rm -rf .repo/local_manifests hardware
-cp scripts/roomservice2.xml .repo/local_manifests/roomservice.xml
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-source build/envsetup.sh
-lunch cipher_h872-userdebug
-m installclean
-m -j$(nproc --all)  bacon
-
-echo "4nd run"
-rm -rf .repo/local_manifests hardware
-cp scripts/roomservice2.xml .repo/local_manifests/roomservice.xml
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-source build/envsetup.sh
-lunch cipher_h872-userdebug
-m installclean
-m -j$(nproc --all)  bacon
-echo "5nd run"
-rm -rf .repo/local_manifests hardware
 cp scripts/roomservice3.xml .repo/local_manifests/roomservice.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
