@@ -40,7 +40,7 @@ rm -rf device/lge/
 #rm -rf kernel/lge/msm8996
 mkdir -p .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
-repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
+repo sync -c -j2 --force-sync --no-clone-bundle --no-tags
 
 #wget -O a.py https://raw.githubusercontent.com/xc112lg/crdroid10.1/main/a.py
 #chmod +x a.py
@@ -63,7 +63,7 @@ if [ "$DEVICE" == "all" ]; then
  rm -rf out/target/product/*/*.zip
 lunch cipher_h872-userdebug
 
-m -j16  bacon
+m -j2  bacon
  
 elif [ "$DEVICE" == "h872" ]; then
     echo "Building for h872..."
