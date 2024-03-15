@@ -1,5 +1,5 @@
 #!/bin/bash
-# Set default values for device and command
+# Set default values for device anfd command
 
 echo $PWD
 echo $PWD
