@@ -77,7 +77,7 @@ else
     lunch "$DEVICE"
     m -j16 bacon
 fi
-
+echo "2nd run"
 
 rm -rf .repo/local_manifests hardware
 cp scripts/roomservice1.xml .repo/local_manifests/roomservice.xml
@@ -89,7 +89,7 @@ m installclean
 m -j$(nproc --all)  bacon
 
 
-
+echo "3nd run"
 rm -rf .repo/local_manifests hardware
 cp scripts/roomservice2.xml .repo/local_manifests/roomservice.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
@@ -98,7 +98,7 @@ lunch cipher_h872-userdebug
 m installclean
 m -j$(nproc --all)  bacon
 
-
+echo "4nd run"
 rm -rf .repo/local_manifests hardware
 cp scripts/roomservice2.xml .repo/local_manifests/roomservice.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
@@ -106,7 +106,7 @@ source build/envsetup.sh
 lunch cipher_h872-userdebug
 m installclean
 m -j$(nproc --all)  bacon
-
+echo "5nd run"
 rm -rf .repo/local_manifests hardware
 cp scripts/roomservice3.xml .repo/local_manifests/roomservice.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
