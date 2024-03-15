@@ -1,32 +1,7 @@
 #!/bin/bash
 # Set default values for device anfd command
 
-echo $PWD
-echo $PWD
-mkdir -p cc
-mkdir -p c
-cp -f cc/ccache.conf c/ccache.conf 
-time ls -1 cc | xargs -I {} -P 5 -n 1 rsync -au cc/{} c/
-ccache -s
-# Update and install ccache
-sudo apt-get update -y
-sudo apt-get install -y apt-utils
-sudo apt-get install -y ccache
-export USE_CCACHE=1
-ccache -M 100G
-export CCACHE_DIR=${PWD}/cc
-ccache -s
-ccache -o compression=false
-ccache --show-config | grep compression
-echo $CCACHE_DIR
-echo $CCACHE_EXEC
-time ls -1 c | xargs -I {} -P 5 -n 1 rsync -au c/{} cc/
-cp -f c/ccache.conf cc/ccache.conf 
-ccache -o compression=false
-ccache --show-config | grep compression
 
-ccache -s
-## Remove existing build artifactsa
 
 #git clean -fdX
 #rm -rf frameworks/base/
