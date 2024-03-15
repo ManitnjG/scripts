@@ -1,8 +1,6 @@
 #!/bin/bash
 # Set default values for device and command
-DEVICE="${1:-all}"  # If no value is provided, default to "all"
-COMMAND="${2:-build}"  # If no value is provided, default to "build"
-DELZIP="${3}"
+
 echo $PWD
 echo $PWD
 mkdir -p cc
@@ -29,9 +27,6 @@ ccache --show-config | grep compression
 
 ccache -s
 ## Remove existing build artifactsa
-if [ "$DELZIP" == "delzip" ]; then
-    rm -rf out/target/product/*/*.zip
-fi
 
 #git clean -fdX
 #rm -rf frameworks/base/
@@ -51,33 +46,13 @@ source build/envsetup.sh
 
 
 
-# Check if command is "clean"
-if [ "$COMMAND" == "clean" ]; then
-    echo "Cleaning..."
-    m clean
-fi
 
-# Check if device is set to "all"
-if [ "$DEVICE" == "all" ]; then
-    echo "Building for all devices..."
- rm -rf out/target/product/*/*.zip
-lunch cipher_h872-userdebug
 
-m -j$(nproc --all)  bacon
- 
-elif [ "$DEVICE" == "h872" ]; then
-    echo "Building for h872..."
 
 lunch cipher_h872-userdebug
 m installclean
 m -j$(nproc --all) bacon
-else
-    echo "Building for the specified device: $DEVICE..."
-    # Build for the specified device
-    lunch "$DEVICE"
-    m -j16 bacon
-fi
-echo "2nd run"
+
 
 rm -rf .repo/local_manifests hardware
 cp scripts/roomservice1.xml .repo/local_manifests/roomservice.xml
@@ -114,3 +89,4 @@ source build/envsetup.sh
 lunch cipher_h872-userdebug
 m installclean
 m -j$(nproc --all)  bacon
+
