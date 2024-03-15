@@ -56,9 +56,7 @@
   <remove-project path="hardware/qcom-caf/sm8450/display" name="android_hardware_qcom_display" revision="udc-caf-sm8450" remote="statix"  />
   <remove-project path="hardware/qcom-caf/sm8450/media" name="android_hardware_qcom_media" revision="tm-caf-sm8450" remote="statix" />
 <remove-project path="hardware/qcom-caf/common" name="android_hardware_qcom-caf_common" remote="statix" revision="tm" />
-  <project path="hardware/qcom-caf/sdm660/audio" name="hardware_qcom-caf_sdm660_audio" groups="qcom,sdm660" remote="evo" />
-  <project path="hardware/qcom-caf/sdm660/display" name="hardware_qcom-caf_sdm660_display" groups="qcom,sdm660" remote="evo" />
-  <project path="hardware/qcom-caf/sdm660/media" name="hardware_qcom-caf_sdm660_media" groups="qcom,sdm660" remote="evo" />
+
  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="evo" >
     <!-- add guard for AOSP hardware/qcom dir -->
     <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
@@ -89,6 +87,9 @@
     <!-- add guards for Pixel kernel modules -->
     <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
   </project>
+  <project path="hardware/qcom-caf/sdm660/audio" name="hardware_qcom-caf_sdm660_audio" groups="qcom,sdm660" remote="evo" />
+  <project path="hardware/qcom-caf/sdm660/display" name="hardware_qcom-caf_sdm660_display" groups="qcom,sdm660" remote="evo" />
+  <project path="hardware/qcom-caf/sdm660/media" name="hardware_qcom-caf_sdm660_media" groups="qcom,sdm660" remote="evo" />
   <project path="hardware/qcom-caf/msm8953/audio" name="android_hardware_qcom_audio" groups="qcom,msm8953" revision="lineage-21.0-caf-msm8953" remote="lineage" />
   <project path="hardware/qcom-caf/msm8953/display" name="android_hardware_qcom_display" groups="qcom" revision="lineage-21.0-caf-msm8953" remote="lineage" />
   <project path="hardware/qcom-caf/msm8953/media" name="android_hardware_qcom_media" groups="qcom,msm8953" revision="lineage-21.0-caf-msm8953" remote="lineage" />
