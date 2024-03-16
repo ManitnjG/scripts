@@ -3,7 +3,7 @@ rm -rf .repo/local_manifests hardware/qcom-caf
 mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
 mv scripts/statix.xml .repo/manifests/snippets
-repo sync -c -j32 --force-sync --no-clone-bundle --no-tags
+repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
 #m clean
 #make clean
