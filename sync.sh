@@ -27,6 +27,7 @@ mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
 mv scripts/statix.xml .repo/manifests/snippets
 repo sync -c -j32 --force-sync --no-clone-bundle --no-tags
+rm -rf hardware/qcom
 source build/envsetup.sh
 #m cleanfdsfdsf
 #make clean
