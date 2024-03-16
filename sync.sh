@@ -9,7 +9,7 @@ rm -rf .repo/local_manifests
 rm -rf device/lge/
 #rm -rf kernel/lge/msm8996
 mkdir -p .repo/local_manifests
-
+mv scripts/statix .repo/manifests/snippets
 cp scripts/roomservice3.xml .repo/local_manifests/roomservice.xml
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
