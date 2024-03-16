@@ -1,4 +1,27 @@
 #!/bin/bash
+# Update and install ccache
+sudo apt-get update -y
+sudo apt-get install -y apt-utils
+sudo apt-get install -y ccache
+export USE_CCACHE=1
+ccache -M 100G
+export CCACHE_DIR=${PWD}/cc
+ccache -s
+ccache -o compression=false
+ccache --show-config | grep compression
+echo $CCACHE_DIR
+echo $CCACHE_EXEC
+time ls -1 c | xargs -I {} -P 5 -n 1 rsync -au c/{} cc/
+
+ccache -o compression=false
+ccache --show-config | grep compression
+
+ccache -s
+
+
+
+
+
 rm -rf .repo/local_manifests hardware/lge
 mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
