@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf .repo/local_manifests
+rm -rf .repo/local_manifests hardware/lge
 mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
 mv scripts/statix.xml .repo/manifests/snippets
