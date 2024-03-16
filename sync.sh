@@ -2,8 +2,7 @@
 rm -rf .repo/local_manifests hardware/qcom-caf
 mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
-cp scripts/lineage.xml .repo/local_manifests
-cp scripts/crdroid.xml .repo/local_manifests
+mv scripts/statix .repo/manifests/snippets
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
 #m clean
