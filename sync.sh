@@ -5,7 +5,7 @@ cp scripts/roomservice.xml .repo/local_manifests
 mv scripts/statix.xml .repo/manifests/snippets
 repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
-#m clean
+#m cleanfdsfdsf
 #make clean
 
  rm out/target/product/*/*.zip
