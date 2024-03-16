@@ -1,19 +1,25 @@
 #!/bin/bash
-# Set default values for device anfd command
-
-
-
-#git clean -fdX
-#rm -rf frameworks/base/
-rm -rf .repo/local_manifests
-rm -rf device/lge/
-#rm -rf kernel/lge/msm8996
-mkdir -p .repo/local_manifests
-mv scripts/statix .repo/manifests/snippets
-cp scripts/roomservice3.xml .repo/local_manifests/roomservice.xml
+rm -rf .repo/local_manifests hardware/qcom-caf
+mkdir .repo/local_manifests
+cp scripts/roomservice.xml .repo/local_manifests
+cp scripts/lineage.xml .repo/local_manifests
+cp scripts/crdroid.xml .repo/local_manifests
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
-lunch cipher_h872-userdebug
-m installclean
-m -j$(nproc --all)  bacon
+#m clean
+#make clean
+ccache -s
+
+ rm out/target/product/*/*.zip
+# source scripts/fixes.sh
+#source build/envsetup.sh && lunch evolution_h872-eng && (while true; do clear; ccache -s; sleep 60; done) & m -j$(nproc --all) evolution
+
+source build/envsetup.sh
+lunch evolution_h872-eng
+
+m -j$(nproc --all) evolution
+#lunch lineage_us997-userdebug
+#m -j$(nproc --all) bacon
+#lunch lineage_h870-userdebug
+#m -j$(nproc --all) bacon
 
