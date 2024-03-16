@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf .repo/local_manifests hardware/qcom-caf
+rm -rf .repo/local_manifests
 mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
 mv scripts/statix.xml .repo/manifests/snippets
@@ -7,7 +7,6 @@ repo sync -c -j16 --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
 #m clean
 #make clean
-ccache -s
 
  rm out/target/product/*/*.zip
 # source scripts/fixes.sh
