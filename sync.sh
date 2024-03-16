@@ -22,7 +22,7 @@ ccache -s
 
 
 
-rm -rf .repo/local_manifests hardware/lge
+rm -rf .repo/local_manifests hardware/lge hardware/qcom
 mkdir .repo/local_manifests
 cp scripts/roomservice.xml .repo/local_manifests
 mv scripts/statix.xml .repo/manifests/snippets
