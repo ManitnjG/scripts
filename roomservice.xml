@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="xc112lg/device_xiaomi_ishtar" path="device/xiaomi/ishtar" remote="github" revision="13.0" />
+  <project name="xc112lg/device_xiaomi_ishtar" path="device/xiaomi/ishtar" remote="github" revision="13.1" />
   <project name="xc112lg/android_vendor_xiaomi_ishtar" path="vendor/xiaomi/ishtar" remote="github" revision="13.0" />
   <project name="MiCode/Xiaomi_Kernel_OpenSource" path="kernel/xiaomi/ishtar" remote="github" revision="ishtar-t-oss" />
 </manifest>

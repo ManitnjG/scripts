@@ -147,4 +147,3 @@ fi
 time ls -1 cc | xargs -I {} -P 10 -n 1 rsync -au cc/{} c/
 cp -f cc/ccache.conf c
 ccache -s
-
