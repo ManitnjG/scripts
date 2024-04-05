@@ -1,5 +1,5 @@
 #!/bin/bash
-
+rm -rf android/device/xiaomi/sm8550-common
  type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
   curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
   && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
@@ -10,7 +10,7 @@
 mkdir -p workspace && cd workspace
   git clone --depth=1 https://github.com/Jiovanni-dump/xiaomi_ishtar_dump -b missi_phone_global-user-13-TKQ1.221114.001-V14.0.1.0.TMAMIXM-release-keys ./firmware-dump
 
-  git clone --depth=1 https://github.com/HurtCopain/device_xiaomi_sm8550-common -b lineage-20 ./android/device/xiaomi/sm8550-common
+  git clone --depth=1 https://github.com/xc112lg/device_xiaomi_sm8550-common -b lineage-20 ./android/device/xiaomi/sm8550-common
 
 
   git clone --depth=1 https://github.com/LineageOS/android_tools_extract-utils -b lineage-20.0 ./android/tools/extract-utils
