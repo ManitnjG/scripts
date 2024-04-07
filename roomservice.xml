@@ -3,6 +3,6 @@
   <project name="xc112lg/xiaomi_ishtar_dump" path="device/xiaomi/ishtar" remote="github" revision="tr" />
   <project name="xc112lg/android_vendor_xiaomi_ishtar" path="vendor/xiaomi/ishtar" remote="github" revision="13.0" />
   <project name="MiCode/Xiaomi_Kernel_OpenSource" path="kernel/xiaomi/ishtar" remote="github" revision="ishtar-t-oss" />
-<project name="LineageOS/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" remote="github" revision="lineage-20" />
+<project name="xc112lg/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" remote="github" revision="patch-1" />
 <project name="TheMuppets/proprietary_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="github" revision="lineage-20" />
 </manifest>
