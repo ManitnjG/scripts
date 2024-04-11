@@ -61,14 +61,14 @@ fi
 if [ "$DEVICE" == "all" ]; then
     echo "Building for all devices..."
  rm -rf out/target/product/*/*.zip
-lunch evolution_h872-userdebug
+lunch evolution_X01BD-userdebug
 
 ccache m -j$(nproc --all) evolution
  
-elif [ "$DEVICE" == "h872" ]; then
-    echo "Building for h872..."
-export BUILD_DEVICE="h872"
-    lunch lineage_h872-userdebug
+elif [ "$DEVICE" == "X01BD" ]; then
+    echo "Building for X01BD..."
+export BUILD_DEVICE="X01BD"
+    lunch lineage_X01BD-userdebug
     m installclean
     m -j$(nproc --all) bacon
 else
